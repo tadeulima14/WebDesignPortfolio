@@ -1,0 +1,543 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .container { /*contains sidebar and content sections of the page*/
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 100%;
+  }
+  
+  .sidebar {
+    background-color: #4f68b9; /*sidebar formatting*/
+      background-size: cover;
+      padding: 2px;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      row-gap: 6px;
+      position: sticky;
+      top: 0;
+      height: 100vh; /* Set the height to the full viewport height */
+  }
+  
+  .left-wrapper { /*this is header wrapper*/
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column; /* Change the direction to column */
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+  }
+  
+  .right-wrapper {
+    grid-column: 2/2;
+    display: grid;
+    grid-template-rows: auto 1fr; /* Adjust row configuration as needed */
+    /* height: 100%; */ /* Remove this line */
+    width: 100%;
+    margin: 0;
+    background-color:#fff;
+    column-gap: 5px;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    background-repeat: no-repeat;
+}
+  
+  .logo img {
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+  }
+  
+  .nav-links {
+    display: block;
+    gap: 3px;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    max-height: 100%;
+  }
+
+.nav-link { /*adjust nav link style */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 15px ; /* Adjust link gap and spacing*/
+  padding-top: 20px;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+}
+  
+  .nav-link:hover {
+    color: red;
+    transition: color 0.5s ease-in-out;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    row-gap: 10px;
+  }
+  
+  
+  .image-container {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 600px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    padding:0;
+  }
+  
+  .description {
+    flex: 1;
+    padding-left: 20px; /* Add some space between image and description */
+  }
+  
+  .description h2 {
+    color: white;
+  }
+  
+  .description p {
+    color: rgb(3, 3, 3);
+  }
+  
+  .appointment-button {
+    padding: 10px 20px; /* Adjust the padding to your desired button size */
+    background-color: #d0177a; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 21px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline on button */
+    padding: 10px; /* Remove padding */
+    position: fixed;
+    /*moves button location, bottom: 20px; 
+    /*right: 20px;*/
+    z-index: 1000; 
+    margin-top: 50px;
+    font-family: "Kaushan Script", cursive;
+  
+  }
+  
+  .appointment-button:hover {
+    background-color: #d0177a; /* Button background color on hover */
+  }
+  
+  h1{
+    grid-row: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
+    width: 100%;
+    margin-top:50px;
+    padding-bottom: 15px;
+    padding-top:24px;
+  }
+
+  .pre-wax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgb(190, 115, 190), rgb(28, 132, 163)); /*content background*/
+    width: auto;
+    border-radius: 15px;
+    margin-left:40px;
+    margin-right: 40px;
+    margin-bottom:50%;
+    margin-top:90px;
+    font-size:20px;
+    height: 100%;
+    
+}
+
+
+ul{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top:15px;
+  line-height: 3.5em;
+  list-style:circle;
+  font-family: "Aleo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+  
+li{
+    line-height:2.8em; /* Line spacing adjustment*/
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+
+
+  
+  .appointment-button:hover {
+    background-color: #d0177a; /* Button background color on hover */
+  }
+
+  a{
+    text-decoration: none;
+    color: black
+  }
+  
+  a:hover{
+    color: rgb(253, 255, 159);
+  }
+
+  .button-decor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .socials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    gap: 25px;
+    margin-top:120px;
+    
+    }
+
+    .sidebar-logo{
+      display: flex;
+      justify-self: center;
+      width: 300px;
+      height: 300px;
+    }
+  
+
+  @media (max-width: 767px) {
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow-y:visible;
+    }
+
+    .left-wrapper {
+      grid-column: 1/2;
+      flex: 1;
+      width: 100%;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+  
+    .nav-link { /*adjust nav link style */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 15px ;
+      padding-top: 25px;
+      width: 100%;
+      font-family: 'Raleway', sans-serif;
+      color: black;
+      font-size: 12px;
+    }
+    
+  
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+  
+    .container {
+      display: grid;
+      grid-template-columns: 30% 70%; /* Use relative units (fr) to make it resp e */
+      min-height: 100vh;
+      width: auto;
+    }
+    
+    .sidebar {
+      padding: 2px;
+      box-sizing: border-box;
+      height: 100%;
+      width: auto;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      row-gap: 6px;
+      position: sticky;
+      top: 0;
+      height: 100vh; /* Set the height to the full viewport height */
+  }
+    
+    
+    .right-wrapper {
+      grid-column: 2/2;
+      display: grid;
+      grid-template-rows: auto 1fr; /* Adjust row configuration as needed */
+      /* height: 100%; */ /* Remove this line */
+      width: 100%;
+      margin: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      column-gap: 5px;
+    }
+    
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 40px;
+      background-repeat: no-repeat;
+  }
+    
+    .logo img {
+      border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+    }
+    
+    
+    .nav-link:hover {
+      color: red;
+      transition: color 0.5s ease-in-out;
+    }
+    
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+      box-sizing: border-box;
+      width: 100%;
+      overflow: auto;
+      height: 100%;
+      width: 100%;
+      row-gap: 10px;
+    }
+    
+    
+    .image-container {
+      flex: 1;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: 600px;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin: 0;
+      padding:0;
+    }
+    
+    .description {
+      flex: 1;
+      padding-left: 20px; /* Add some space between image and description */
+    }
+    
+    .description h2 {
+      color: white;
+    }
+    
+    .description p {
+      color: rgb(3, 3, 3);
+    }
+    
+    .appointment-button {
+      padding: 10px 20px; /* Adjust the padding to your desired button size */
+      background-color: #d0177a; /* Button background color */
+      color: white; /* Button text color */
+      border: none;
+      border-radius: 5px; /* Rounded corners for the button */
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration: none; /* Remove underline on button */
+      padding: 5px; /* Remove padding */
+      position: fixed;
+      /*moves button location, bottom: 20px; 
+      /*right: 20px;*/
+      z-index: 1000; 
+      margin-top: 33px;    
+    }
+    
+    .appointment-button:hover {
+      background-color: #d0177a; /* Button background color on hover */
+    }
+    
+    h1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      background-color: #fff;
+      width: 100%;
+      padding-bottom: 15px;
+      padding-top:24px;
+
+    }
+  
+    .pre-wax { /* main content formatting */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px;
+      background-color: rgba(226, 219, 211, 0.9);
+      border-radius: 15px;
+      margin-left:20px;
+      margin-right: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  
+  ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:15px;
+    line-height: height 6.5em;
+    list-style:circle;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  u{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+    
+  li{
+      line-height:2.0em;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  p{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  
+  }
+  
+  a{
+      text-decoration:none;
+      color: black;
+  }
+  
+  
+    
+    .appointment-button:hover {
+      background-color: #d0177a; /* Button background color on hover */
+    }
+  
+    a{
+      text-decoration: none;
+      color: black
+    }
+    
+    a:hover{
+      color: yellow;
+    }
+  
+    .button-decor{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    .sidebar-logo{
+      width: 80px;
+      height: 80px;
+      z-index: 999;
+    }
+
+    
+  .socials{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    gap: 25px;
+    margin-top:80px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    margin-left:5px;
+    margin-right: 5px;
+
+    }
+
+
+  }

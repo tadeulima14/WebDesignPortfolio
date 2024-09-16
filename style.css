@@ -1,0 +1,292 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    font-family: 'Helvetica', sans-serif;
+    color: #333;
+    background-color: #111;
+    line-height: 1.6;
+}
+
+/* Grid Container */
+.grid-container {
+    grid-row: 2/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Three columns with different widths */
+    gap: 2rem;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Left Column */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column:1/2 ;
+    padding: 7rem;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center-aligns text */
+    grid-column: 1/2;
+    background-color: #bea99f;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+
+}
+
+.intro{
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.git{
+    display: flex;
+    margin-left: 7rem;
+}
+
+.nav-links {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center;     
+    background-color: #222;  
+    padding: 1rem;           /* Adds some padding */
+    height: 10vh;            /* Height of the navigation bar */
+}
+
+.nav-links a {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    text-decoration: none;
+    color: #ddd;
+}
+
+.nav-links ol {
+    display: flex;           /* Displays list items in a row */
+    gap: 5rem;               /* Space between items */
+    list-style: none;        /* Removes default list bullets */
+}
+
+.nav-links li {
+    position: relative; /* Make a reference for dynamic properties, before and after */
+    color: #ddd;
+    cursor: pointer; 
+    padding: 0.5rem 0; /* Add vertical padding for spacing */
+}
+/* ANimated underline parameters*/
+.nav-links li::after {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute; /* allows underline to ony move within the borders of the li element*/
+    left: 0;
+    bottom: 0;
+    width: 0; /* Start with 0 width, no length, this is "frame 1"*/
+    height: 4px; /* Thickness */
+    background: linear-gradient(90deg, rgb(204, 106, 15), rgb(202, 168, 13)); /* Gradient from purple to blue */
+    transition: width 0.3s ease; 
+}
+
+.nav-links li:hover::after {
+    width: 100%; /* Full width on hover this is "frame 2" */
+}
+
+
+
+
+.caption {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    margin-top: 4rem;
+
+}
+
+.fade-in {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInAnimation 2s forwards; /* Fades in over 2 seconds */
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Hero Section */
+.hero {
+    margin-top: -50px;
+    grid-column: 1/2;
+    color: #fff;
+    margin-bottom: 5rem; /* Adjust Header and about section vertical margins  */
+}
+
+.hero-content {
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInAnimation 3.2s forwards; /* Fades in on page load */
+}
+
+
+
+/* Projects Section */
+.projects-section {
+    margin-top: 4.3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    grid-column: 2/ 3;
+}
+
+.proj-caption{
+    color: #ddd;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 17px;
+    margin-top: 2px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-attachment: fixed; /* This is the key for parallax effect */
+    padding: 5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1; /* Ensure it's above the pseudo-elements */
+    border-radius: 12px;
+}
+
+.project-card h3, .project-card p {
+    position: relative;
+    z-index: 1; /* Ensure text is on top of the background */
+}
+
+
+.project-card::after {
+    content: "";
+    z-index: -1; /* Ensure it is behind the card */
+    position: absolute; /* Correct the typo from "absoloute" to "absolute" */
+    width: 100%;
+    height: 100%; 
+    left: 0;
+    top: 0;
+    border-radius: 12px; /* Match card’s border radius */
+    background-color: #333;
+}
+
+.project-card::before {
+    content: "";
+    background: linear-gradient(45deg,#FF7300, #c24f1a,
+     #e77c18, #dd5313, #FF7300
+     );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 8px); /* Adjust size of glow W/H */
+    height: calc(100% + 8px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 12px; /* Match card’s border radius */
+    opacity: 0; /* Start with opacity 0 to show only on hover */
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card:hover::before {
+    opacity: 1; /* Makes the glow effect visible on hover */
+}
+
+
+h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 45px;
+}
+
+h2 {
+    position: relative; /* This is required for positioning the pseudo-element */
+    background-color: #e5e0ad; /* Light paper-like color */
+    padding: 1rem 1.2rem; /* Adjust padding for better appearance */
+    margin-bottom: 7rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+/* Pseudo-element for the tab */
+h2::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position it relative to the h2 */
+    top: -.8rem; /* Adjust this value to position the tab */
+    left: 1px; /* Adjust this value to align the tab */
+    width: 50px; /* Width of the tab */
+    height: 15px; /* Height of the tab */
+    background-color: #ecf1b2; /* Same color as the h2 background for a seamless look */
+    border-radius: 0 0 5px 5px; /* Rounded corners on the bottom */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Optional: Adds shadow to the tab */
+    z-index: -1; /* Sends the tab behind the content of the h2 */
+    transform: rotate(180deg); /* Rotate the tab by -10 degrees */
+
+}
+
+
+h3{
+    margin-top: -15px;
+    color: #dddddd;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900*/
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+

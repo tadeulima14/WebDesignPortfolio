@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>y
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=
+    Cormorant:wght@500&family=Manrope&family=PT+Serif&family=Poppins:
+    wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2 class="time"></h2>
+        </header>
+        <div class = "searchbar">
+            <input type ="text" id="cityInput" placeholder="Enter city.." 
+            spellcheck="false">
+            <button><img src="images/search.png"></button>
+        </div>
+        
+        <div class="weather">
+            <div class="icon-border">
+                <img class = weather-icon>
+                <img src="">
+                <h1 class="temp"></h1>
+                <h2 class="city"></h2>
+            </div>
+        </div>
+        
+            <div class="details">
+                <div class="col">
+                    <img src = "images/humidity.png"class="humidity-icon">
+                    <div class="ambient-data">
+                        <p class="humidity"></p>
+                        <p>Humidity</p>
+                        
+                    </div>
+                </div>
+                <div class = "col">
+                    <img src="images/wind.png"class="wind-icon">
+                    <div class="ambient-data">
+                        <p class ="wind"></p>
+                        <p>Wind Speed</p>
+                        
+                    </div>
+                   
+                </div>
+
+            </div>
+        
+    </div>
+    <script src ="javascript/main.js"></script>
+</body>
+</html>
