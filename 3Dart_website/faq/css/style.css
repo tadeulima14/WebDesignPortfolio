@@ -1,0 +1,218 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: .6fr 3.4fr;
+	grid-template-rows: 1fr;
+	height: 100vh;
+	width: 100vw;
+}
+
+.wrapper-1 {
+	grid-column: 1/2;
+	grid-row: 1;
+	background-color: #070709;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+.wrapper-2 {
+	grid-column: 2/ span 1;
+	grid-row: 1;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr;
+	background-image: url(../../images/Drifter_Wallpaper_CLear.jpg);
+	height: 100%;
+	width: 100%;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	margin: 30px;
+	font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: 2px underline yellow;
+}
+
+nav a.active {
+	font-weight: bold;
+	text-decoration: 4px overline rgb(245, 146, 60);
+}
+
+.logo-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 150px;
+	align-self: start;
+	margin-top: 5px;
+}
+
+.logo-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.text-container {
+	grid-row: 1/2;
+	grid-column: 1;
+	background-color: rgba(5, 5, 5, .5);
+	color: black;
+	width: 100%;
+	height: 95%;
+	line-height: 3.5;
+	border-radius: 6px;
+	box-shadow: 9px 9px 4px rgba(0, 0, 0, .5);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.map-container {
+	grid-row: 2/3;
+	grid-column: 1;
+	background-color: rgba(5, 5, 5, .5);
+	color: black;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+}
+
+.text {
+	color: aliceblue;
+}
+p {
+	color: white;
+	margin-left: 40px;
+}
+
+
+@media screen and (max-width: 600px) {
+	body{
+		grid-template-columns: 1fr;
+		grid-template-rows: 20% auto;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		width: 100vw;
+		height: 100vh;
+		overflow-x: hidden;
+	}
+    
+	.wrapper-1 { /* header, flex column with logo, and nav */ 
+		top: 0;
+		background-color: #070709;
+		padding: 3px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		position: sticky;
+		z-index: 100;
+	
+	}
+
+	  .wrapper-2 { 
+		grid-row: 2/3;
+		grid-column: 1;
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr;
+		background-image: url(../../images/Drifter_Wallpaper_CLear.jpg);
+		height: 100%;
+		width: 100%;
+		margin: 0px;
+	}
+
+	.map-container {
+		grid-row: 2/3;
+		grid-column: 1;
+		width: 100%;
+		height: auto;
+		margin: 0px;
+		border-radius: 6px;
+		box-shadow: 9px 9px 4px rgba(0, 0, 0, .5);
+	}
+
+	.text-container {
+		grid-row: 1/2;
+		grid-column: 1;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto; /* Change the value to 'auto' */
+		background-color: rgba(5, 5, 5, 0.5);
+		margin: 0px;
+		width: 100%;
+		max-width: 100%; /* Add max-width to prevent overflow */
+		height: auto;
+		line-height: normal;
+		border-radius: 6px;
+		box-shadow: 9px 9px 4px rgba(0, 0, 0, 0.5);
+		font-family: 'DM Sans', sans-serif;
+		overflow-wrap: break-word; /* Add word wrapping to prevent horizontal overflow */
+		font-size: 12px;
+	  }
+    
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+		width: auto;
+    }
+    
+    .logo-container {
+		display: flex;
+		flex-direction: row;
+		width: auto;
+		height: 80px;
+		align-self: center;
+	}
+	
+	.logo-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+  
+
+	nav {
+		display: flex; /* this orients the nav into a row*/
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		height: auto;
+		width: auto;
+	}
+
+
+    .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+
+	p {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		color:aliceblue
+	}
+
+	
+    
+}

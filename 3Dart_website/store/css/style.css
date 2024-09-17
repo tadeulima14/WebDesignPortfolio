@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Wrapper styles */
+body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: .6fr 3.4fr;
+    grid-template-rows: 1fr;
+	height: 100vh;
+    width: 100vw;
+}
+
+.wrapper-1 { /* header */
+	background-color: #070709;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper-2 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-rows: 1fr;
+    height: 100%;
+    background-color: burlywood;
+    width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+    overflow: hidden; 
+}
+
+.grid-item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    height: 100%;
+}
+
+.grid-content {
+    position: relative; 
+    height: 100%;
+}
+
+figcaption {
+    position: absolute; 
+    top: 50%; 
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 15px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: 2px underline yellow;
+}
+
+nav a.active {
+	font-weight: bold;
+	text-decoration: 4px overline rgb(245, 146, 60);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    align-self: start;
+    margin-top: 5px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 600px) {
+	body{
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 80%;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.wrapper-1 { /* header, flex column with logo, and nav */ 
+		top: 0;
+		background-color: #070709;
+		padding: 3px;
+		display: flex;
+		flex-direction: column;
+        height: 100%;
+
+	
+	}
+    
+	nav a {
+		color: white;
+		text-decoration: none;
+		margin: 5px;
+		font-size: 13px;
+	}
+    
+    .logo-container {
+		display: flex;
+		flex-direction: row;
+		width: auto;
+		height: 80px;
+		align-self: center;
+	}
+    
+    .logo-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+    .wrapper-2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        background-color: burlywood;
+        height: 100%;
+        width: auto;
+        overflow-y: auto; 
+        
+      }
+    
+      .grid-item {
+        height: auto;
+        width: 100%;
+      }
+    
+    .grid-content {
+        height: 100%;
+    }
+    
+    
+    .nav a:hover {
+        color: orange;
+    }
+    
+
+	nav {
+		display: flex; /* this orients the nav into a row*/
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		height: auto;
+		width: auto;
+	}
+
+    .grid-item img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    
+    
+}

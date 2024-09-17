@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Two Wrapper Elements</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="wrapper-1">
+      <div class="logo-container">
+        <img src="../images/mylogofinal2.png">
+      </div>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="../about/index.html">About</a>
+          <a href="../gallery/index.html">Gallery</a>
+          <a href="../projects/index.html"class="active">Projects</a>
+          <a href="../reels/index.html">Reels</a>
+          <a href="../faq/index.html">Faq</a>
+          <a href="../store/index.html">Store</a>
+		    </nav>
+    </header>
+
+    <div class="wrapper-2">
+
+      <div class="grid-item"> <!--left grid item-->
+
+          <img src="../images/WALL-E_draft_close.jpg">
+          <figcaption>After the modeling was done,
+            I moved to UV wrapping, so I could adjust the multiple textures. 
+            After texturing I had to figure out a rig for all the moving parts. The armature was easy enough, 
+            but the most challenging part of this project was getting the tracks to work.</figcaption>
+      </div>
+      <div class="grid-item">  <!--center grid item-->
+          <img src="../images/walle_closeup.jpg">
+          <figcaption>
+                Wall-e rigged model,
+                I started by making the large parts of WALL-E, 
+                the body, arms, eyes, suspension and tracks. 
+                
+            </figcaption>
+      </div>
+      <div class="grid-item">
+          <img src="../images/WALL-E_wireframe_sidev.jpg"><!--right grid item-->
+          <figcaption>I used constraints to lock the rotation to the X axis and transfer any 
+            Y movement data to the X axis so the tracks rotated accurately.
+            Before using constrainsts moving 
+            Walle would caused my track assembly to break and distort</figcaption>
+
+      </div>
+
+      <div class="grid-item">
+
+          <img src="../images//junkersc_w.jpg">
+          <figcaption>The corrugated metal was hard to align properly on 
+            all the separate panels, so this was a good challenge
+             to overcome.</figcaption>
+      </div>
+      <div class="grid-item">
+          <img src="../images/g38-skyshot(front).jpg">
+          <figcaption>
+                On this project I modeled a Junkers G38 for an animation. 
+                I only rigged the ailerons, elevator, and rudder
+             so it was a simple rig overall but I learned a lot 
+             about uv wrapping and texturing during this project.
+               
+            </figcaption>
+      </div>
+      <div class="grid-item">
+          <img src="../images/junkersu1_w.jpg">
+          <figcaption>The procedural texture is based off a 
+            wave texture, to create stripes and I used a 
+            displacement node to lower the edges of the stripes
+             and raise the center face area to give a ridged metal
+             effect.</figcaption>
+      </div>
+
+        <div class="grid-item">
+            <img src="../images/healthyhd.jpg">
+            <figcaption>
+                I assigned a boolean function to a cube so that it would "eat" 
+                another mesh when that assigned mesh was passed through the
+                cube. I assigned the logo to be the target then placed the 
+                cube over it and animated the cube slowly moving down the X 
+                axis. With this I achieved an effect of text being slowly 
+                sprayed on a wall.</figcaption>
+        </div>
+        
+        <div class="grid-item">
+            <img src="../images/healthy_workflow.jpg">
+            <figcaption> Graffiti logo. 
+                For this project my client wanted his logo to be 
+                spray painted on a wall. The paint can had to create a 
+                smoke effect that could be blown away by the wind at the 
+                end of the spraying, revealing the logo beneath. This propject
+                had many different simulation effects and was another 
+                valuable learning experience for me.
+            </figcaption>
+        </div>
+        
+        <div class="grid-item">
+            <img src="../images/healthyhd1.jpg">
+            <figcaption>  
+                After this I modeled a paint can and 
+                attached a smoke simulation to the nozzle to achieve my smoke
+                fx. Adding a force field to move the smoke was the final step
+            </figcaption>
+        </div>
+    </div>
+
+		
+</body>
+
+
+</html>
