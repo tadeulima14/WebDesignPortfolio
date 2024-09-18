@@ -100,6 +100,28 @@ body {
     font-family: 'DM Sans', sans-serif;
   }
 
+  .backhome{
+    margin-left: 50px;
+    margin-top:30px;
+    width: auto;
+  }
+  
+  .backhome h3{
+    font-size: 18px;
+    color: aliceblue;
+  }
+  
+  .Backto-container{
+    display: block;
+    block-size: fit-content;
+    align-items: center;
+    width: fit-content;
+    rotate: 180deg;
+    margin-left: 30px;
+    margin-top: -22px;
+  
+  }
+
 
 @media screen and (max-width: 600px) {
 

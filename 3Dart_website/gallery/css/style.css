@@ -89,6 +89,28 @@ nav a.active {
 }
 
 
+.backhome{
+	margin-left: 40px;
+	margin-top:-15px;
+	width: auto;
+}
+
+.backhome h3{
+	font-size: 18px;
+	margin-top: 40px;
+	color: aliceblue;
+}
+
+.Backto-container{
+	display: block;
+	block-size: fit-content;
+	align-items: center;
+	width: fit-content;
+	rotate: 180deg;
+	margin-left: 30px;
+
+}
+
 @media screen and (max-width: 600px) {
 	body{
 		grid-template-columns: 1fr;

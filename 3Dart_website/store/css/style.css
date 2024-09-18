@@ -110,6 +110,27 @@ nav a.active {
     object-fit: contain;
 }
 
+.backhome{
+    margin-left: 40px;
+    width: auto;
+    margin-top: 40px;
+  }
+  
+  .backhome h3{
+    font-size: 16px;
+    color: aliceblue;
+  }
+  
+  .Backto-container{
+    display: block;
+    block-size: fit-content;
+    align-items: center;
+    width: fit-content;
+    rotate: 180deg;
+    margin-left: 30px;
+  
+  }
+
 @media screen and (max-width: 600px) {
 	body{
 		grid-template-columns: 1fr;

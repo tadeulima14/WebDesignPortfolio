@@ -1,3 +1,4 @@
+
 body {
 	margin: 0;
 	padding: 0;
@@ -96,6 +97,25 @@ p {
 	height: auto;
 	width: auto;
 }
+
+.backhome h3{
+	font-size: 18px;
+	margin-top: 40px;
+}
+
+.Backto-container{
+	display: block;
+	block-size: fit-content;
+	align-items: center;
+	width: fit-content;
+	rotate: 180deg;
+	margin-left: 5px;
+	margin-top: 30px;
+
+}
+
+
+
 
 @media screen and (max-width: 767px) {
     body { /*main content*/
