@@ -42,6 +42,10 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+	font-family: "Quicksand", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
 
 }
 
@@ -91,8 +95,9 @@ nav a.active {
 
 .backhome{
 	margin-left: 40px;
-	margin-top:-15px;
+	margin-top:680px;
 	width: auto;
+	position: fixed;
 }
 
 .backhome h3{

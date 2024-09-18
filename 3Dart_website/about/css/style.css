@@ -69,6 +69,10 @@ nav {
 	align-items: center;
 	color: white;
 	height: auto;
+	font-family: "Quicksand", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
 }
 
 nav a {

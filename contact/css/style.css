@@ -68,12 +68,12 @@ header {
 }
 
 main {
-    margin-top: 6rem;
+    margin-top: 1rem;
     grid-area: main;
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    gap: 2rem; /* Space between header and content */
+    gap: .5rem; /* Space between header and content */
     margin-left: 40px;
     margin-right: 40px;
 }
@@ -106,7 +106,6 @@ h2::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -2rem;
 }
 
 
@@ -134,7 +133,7 @@ h2::before {
     width: 100%;
     margin-bottom: 40px;
     border-radius: 10px;
-    background: linear-gradient(to bottom, rgba(112, 116, 121, 0.5), transparent);
+    background: linear-gradient(to bottom, rgba(112, 116, 121, 0.4), transparent);
     position: relative;
     padding: 10px;
     box-shadow: 0 0 0 2px #ffffff9c, 0 0 0 5px rgba(255, 255, 255, 0.1);
@@ -144,19 +143,6 @@ h2::before {
     font-size: 20px;
 }
 
-/* Optional: Add a pseudo-element for .email-form h3 */
-.email-form h3::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    border: .01px solid #fff;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
-    z-index: -1;
-}
 
 .email-form form {
     display: flex;
@@ -210,6 +196,7 @@ h2::before {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
     width: 780px;
+    height: 810px;
 }
 
 .skills h3 {
@@ -277,6 +264,47 @@ h2::before {
     color: #ddd;
     margin: 0;
 }
+
+.language-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Responsive columns */
+    gap: 15px; /* Space between items */
+    padding: 20px 0; /* Add padding for spacing */
+}
+.language-item{
+    margin-top: -15px;
+    width: 90px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(80, 106, 138, 0.5), transparent);
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 20px;
+    position: relative; /* Ensure correct positioning for pseudo-elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    cursor: pointer; /* Change cursor to pointer */
+    
+}
+.language-item:hover {
+    background: linear-gradient(to bottom, rgba(100, 130, 170, 0.7), transparent); /* Change background color on hover */
+}
+
+.language-item img {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.language-item p {
+    color: #ddd;
+    margin: 0;
+    font-size: 11px;
+}
+
+
 
 
 .git{

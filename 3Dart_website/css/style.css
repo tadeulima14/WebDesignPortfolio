@@ -29,6 +29,10 @@ nav {
 	justify-content: center;
 	align-items: center;
 	color: white;
+	font-family: "Quicksand", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
 }
 nav a {
 	color: white;
