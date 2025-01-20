@@ -1,0 +1,581 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: #4f68b9; /*sidebar formatting*/
+    background-size: cover;
+    padding: 2px;
+    box-sizing: border-box;
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 30px;
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Set the height to the full viewport height */
+}
+
+.left-wrapper {
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column; /* Change the direction to column */
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+}
+
+.right-wrapper {
+  background-color: rgba(243, 241, 239, 0.9);
+  grid-column: 2/2;
+  display: grid;
+  grid-template-rows: auto 1fr; /* Adjust row configuration as needed */
+  /* height: 100%; */ /* Remove this line */
+  width: 100%;
+  margin: 0;
+  background-repeat: auto;
+  background-size: fill;
+  column-gap: 5px;
+  z-index: 999;
+  overflow-x: .5px;
+}
+
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  background-repeat: no-repeat;
+}
+
+.logo img {
+  border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+  
+}
+
+.sidebar-logo{
+  display: flex;
+  justify-self: center;
+  width: 300px;
+  height: 300px;
+}
+  
+.nav-links {
+  display: block;
+  gap: 3px;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  max-height: 100%;
+}
+
+.socials{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content:center;
+gap: 25px;
+margin-top:80px;
+font-family: 'Raleway', sans-serif;
+font-size: 15px;
+margin-left:5px;
+margin-right: 5px;
+height: 100px;
+
+}
+
+
+.contactinfo{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 16px;
+  padding-left: 15px;
+}
+
+.contact-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.contactinfo li{
+  line-height: 1.7em;
+  text-decoration: none;
+}
+
+.contactinfo ol{
+  line-height: 1.7em;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+
+
+
+.nav-link { /*adjust nav link style */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 15px ; /* Adjust link gap and spacing*/
+  padding-top: 20px;
+  width: auto;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  
+}
+ 
+.ornament{
+  background-image: url(../images/pink_ornaments.jpg);
+}
+
+
+.content {
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  row-gap: 10px;
+}
+
+.grid-row {
+  margin-top: 0; /* Remove margin from the top */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.row1 {
+  background-color: #4f99bb; /* Light orange */
+  margin-top: -55px;
+}
+
+.row2 {
+  background-color: #E3A7A5; /* Light red */
+  font-family: 'Roboto', sans-serif;
+}
+
+.row3 {
+  background-color: #4f99bb; /* Light blue */
+  font-family: 'Roboto', sans-serif;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: 600px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+  padding:0;
+}
+
+.description {
+  flex: 1;
+  padding-left: 20px; /* Add some space between image and description */
+  font-family: "Aleo", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.description h2 {
+  color: white;
+}
+
+.description p {
+  color: rgb(3, 3, 3);
+}
+
+.appointment-button {
+  padding: 10px 20px; /* Adjust the padding to your desired button size */
+  background-color: #d0177a; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners for the button */
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline on button */
+  padding: 10px; /* Remove padding */
+  position: fixed;
+  /*moves button location, bottom: 20px; 
+  /*right: 20px;*/
+  z-index: 1000; 
+  font-family: "Kaushan Script", cursive;
+}
+
+.appointment-button:hover {
+  background-color: #d0177a; /* Button background color on hover */
+}
+
+h1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-family:'Pacifico', cursive;
+}
+
+a{
+  text-decoration: none;
+  color: black
+}
+
+a:hover{
+  color: rgb(253, 255, 159);
+}
+
+h2.blueh2{
+  color: black;
+}
+
+.catsmeow{
+display: block;
+object-fit:contain;
+}
+
+@media (max-width: 767px) {
+  **{
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+  }
+
+  .nav-links a{
+    font-size: 12px;
+  }
+
+  .nav-link { /*adjust nav link style */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 15px ;
+    padding-top: 25px;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 12px;
+  }
+  
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 100vh;
+    width: auto;
+  }
+  
+  .sidebar {
+      background-size: cover;
+      padding: 2px;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      row-gap: 6px;
+      position: sticky;
+      top: 0;
+      height: 100vh; /* Set the height to the full viewport height */
+  }
+
+    .left-wrapper {
+    grid-column: 1/2;
+    flex: 1;
+    width: auto;
+  }
+
+  .right-wrapper{
+    grid-column: 2/2;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+    margin: 0;
+  }
+
+  .ornament{
+    background-image: url(../images/pink_ornaments.jpg);
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    background-repeat: no-repeat;
+  }
+  
+  .logo img {
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+  }
+  
+    
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    width: auto;
+    row-gap: 10px;
+  }
+  
+  .grid-row {
+    margin-top: 0; /* Remove margin from the top */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .row1 {
+    background-color: #FFDDC1; /* Light orange */
+    margin-top: -55px;
+  }
+  
+  .row2 {
+    background-color: #E3A7A5; /* Light red */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .row3 {
+    background-color: #A2C7E5; /* Light blue */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .image-container {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 600px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    padding:0;
+  }
+  
+  .description {
+    flex: 1;
+    padding-left: 20px; /* Add some space between image and description */
+  }
+  
+  .description h2 {
+    color: white;
+  }
+  
+  .description p {
+    color: rgb(3, 3, 3);
+  }
+  
+  .appointment-button {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    width: 160px;
+    padding: 10px 20px; /* Adjust the padding to your desired button size */
+    background-color: #d0177a; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline on button */
+    padding: 4px; /* Remove padding */
+    position: fixed;
+    /*moves button location, bottom: 20px; 
+    /*right: 20px;*/
+    z-index: 1000; 
+    margin-top: 7px;
+  
+  }
+  
+  .appointment-button:hover {
+    background-color: #d0177a; /* Button background color on hover */
+  }
+  
+  h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family:'Pacifico', cursive;
+  }
+  
+  a{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+  }
+
+  .socials{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    gap: 25px;
+    margin-top:80px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    margin-left:5px;
+    margin-right: 5px;
+
+    }
+
+    .social1{
+      height: 35px;
+      width: 35px;
+    }
+    
+    .social2{
+      height: 35px;
+      width: 35px;
+    }
+
+    .header-address{
+      background-color: rgb(255, 255, 255,.800);
+      padding-left:15px;
+      padding-right: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius:8px;
+      width: auto;
+    }
+  
+
+  
+  h2.blueh2{
+    color: black;
+  }
+  
+  .catsmeow{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-self: center;
+  object-fit:fill;
+  height: auto;
+  }
+
+  
+  .sidebar-logo{
+    width: 80px;
+    height: 80px;
+    z-index: 999;
+  }
+/*NEED TO FIX HORIZONTAL ALIGNMENT  */
+  .contactinfo{
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 16px;
+    padding-left: 15px;
+    width: auto;
+  }
+  
+  .contact-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .contactinfo li{
+    line-height: 1.7em;
+    text-decoration: none;
+  }
+  
+  .contactinfo ol{
+    line-height: 1.7em;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+  }
+  
+
+
+}

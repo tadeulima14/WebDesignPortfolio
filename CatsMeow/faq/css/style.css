@@ -1,0 +1,689 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .container { /*contains sidebar and content sections of the page*/
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 100%;
+  }
+  
+  .sidebar {
+    background-color: #4f68b9; /*sidebar formatting*/
+      background-size: cover;
+      padding: 2px;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      row-gap: 15px;
+      position: sticky;
+      top: 0;
+      height: 100vh; /* Set the height to the full viewport height */
+  }
+  
+  .left-wrapper { /*this is header wrapper*/
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column; /* Change the direction to column */
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+  }
+  
+  .right-wrapper {
+    grid-column: 2/2;
+    display: grid;
+    grid-template-rows: auto 1fr; /* Adjust row configuration as needed */
+    /* height: 100%; */ /* Remove this line */
+    width: 100%;
+    margin: 0;
+   
+    background-size: fill;
+    column-gap: 5px;
+  }
+  
+  .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 40px;
+      background-repeat: no-repeat;
+  }
+  
+  .logo img {
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+  }
+  
+  .nav-links {
+    display: block;
+    gap: 3px;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    max-height: 100%;
+  }
+  
+  .nav-link { /*adjust nav link style */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 15px ; /* Adjust link gap and spacing*/
+    padding-top: 20px;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+
+    
+  }
+  
+  .nav-link:hover {
+    color: red;
+    transition: color 0.5s ease-in-out;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    row-gap: 10px;
+  }
+  
+  
+  .image-container {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 600px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    padding:0;
+  }
+  
+  .description {
+    flex: 1;
+    padding-left: 20px; /* Add some space between image and description */
+  }
+  
+h2 {
+    color: white;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+  
+  .description p {
+    color: rgb(3, 3, 3);
+  }
+  
+  .appointment-button {
+    padding: 10px 20px; /* Adjust the padding to your desired button size */
+    background-color: #d0177a; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline on button */
+    padding: 0; /* Remove padding */
+    position: fixed;
+    /*moves button location, bottom: 20px; 
+    /*right: 20px;*/
+    z-index: 1000; 
+  
+  }
+  
+  .appointment-button:hover {
+    background-color: #d0177a; /* Button background color on hover */
+  }
+  
+  h1{
+    grid-row: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    background-color: #fff;
+    width: 100%;
+    margin-top:48px;
+    padding-bottom: 20px;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 20px;
+
+  }
+
+  .pre-wax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top:15px;
+  line-height: height 6.5em;
+  list-style:none;
+  font-family: 'Poppins', sans-serif;
+}
+  
+li{
+    line-height:3.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+
+.appointment-button {
+    padding: 10px 20px; /* Adjust the padding to your desired button size */
+    background-color: #d0177a; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 21px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline on button */
+    padding: 10px; /* Remove padding */
+    position: fixed;
+    /*moves button location, bottom: 20px; 
+    /*right: 20px;*/
+    z-index: 1000;
+    margin-right: 10px;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 50px;
+  
+  }
+  
+  .appointment-button:hover {
+    background-color: #d0177a; /* Button background color on hover */
+  }
+
+  a{
+    text-decoration: none;
+    color: black
+  }
+  
+  a:hover{
+    color: yellow;
+  }
+  
+  h3{
+    grid-row: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .questions{
+    grid-row: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+  }
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.faq {
+    padding: 60px;
+    background-image: linear-gradient(to bottom, rgb(190, 115, 190), rgb(28, 132, 163)); /*content background*/
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.faq h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-family: "Aleo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.faq p {
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 65px;
+    line-height: 1.5;
+    font-family: "Aleo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}
+
+/* Style for the FAQ list */
+.faq-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.faq-list-item {
+    margin-bottom: 5px;
+}
+
+/* Style for the FAQ questions (Q) */
+.faq-question {
+    font-size: 18px;
+    color: #e258a2;
+    font-weight: bold;
+}
+
+/* Style for the FAQ answers (A) */
+.faq-answer {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.button-decor{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.socials{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+  gap: 25px;
+  margin-top:120px;
+  
+  }
+
+  .sidebar-logo{
+    display: flex;
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+  }
+
+
+@media (max-width: 767px) {
+  .left-wrapper {
+    display: flex;
+    align-items: center;
+    grid-column: 1/2;
+    flex: 1;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link { /*adjust nav link style */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 15px ;
+    padding-top: 25px;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 12px;
+  }
+  
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 100vh;
+    width: auto;
+  }
+  
+  .sidebar {
+    background-size: cover;
+    padding: 2px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    row-gap: 6px;
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Set the height to the full viewport height */
+}
+
+
+  
+  .right-wrapper {
+    grid-column: 2/2;
+    display: grid;
+    grid-template-rows: auto 1fr; /* Adjust row configuration as needed */
+    /* height: 100%; */ /* Remove this line */
+    width: 100%;
+    margin: 0;
+    column-gap: 5px;
+  }
+  
+  .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 40px;
+      background-repeat: no-repeat;
+  }
+  
+  .logo img {
+    border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+  }
+  
+
+  
+  .nav-link:hover {
+    color: red;
+    transition: color 0.5s ease-in-out;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    row-gap: 10px;
+  }
+  
+  
+  .image-container {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 600px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    padding:0;
+  }
+  
+  .description {
+    flex: 1;
+    padding-left: 20px; /* Add some space between image and description */
+  }
+  
+h2 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+
+  }
+  
+  .description p {
+    color: rgb(3, 3, 3);
+  }
+  
+  .appointment-button {
+    padding: 10px 20px; /* Adjust the padding to your desired button size */
+    background-color: #d0177a; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline on button */
+    padding: 5px; /* Remove padding */
+    position: fixed;
+    /*moves button location, bottom: 20px; 
+    /*right: 20px;*/
+    z-index: 1000;
+    margin-top:35px; 
+  
+  }
+  
+  .appointment-button:hover {
+    background-color: #d0177a; /* Button background color on hover */
+  }
+  
+  h1{
+    grid-row: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    background-color: #fff;
+    width: 100%;
+    margin-top:40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
+  }
+
+  .pre-wax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top:15px;
+  line-height: 1.5em;
+  list-style:none;
+  font-family: 'Poppins', sans-serif;
+}
+  
+li{
+    line-height:3.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+  a{
+    text-decoration: none;
+    color: black
+  }
+  
+
+  h3{
+    grid-row: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: black;
+    font-family:'Pacifico', cursive;
+  }
+
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    padding: 20px;
+    background-color: rgba(226, 219, 211, 0.9);
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.faq h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.faq p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+/* Style for the FAQ list */
+.faq-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.faq-list-item {
+    margin-bottom: 20px;
+}
+
+/* Style for the FAQ questions (Q) */
+.faq-question {
+    font-size: 18px;
+    color: #e258a2;
+    font-weight: bold;
+}
+
+/* Style for the FAQ answers (A) */
+.faq-answer {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.button-decor{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.sidebar-logo{
+  width: 80px;
+  height: 80px;
+  z-index: 999;
+}
+
+
+.socials{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+  gap: 30px;
+  margin-top:80px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  margin-left:5px;
+  margin-right: 5px;
+
+  }
+
+}
