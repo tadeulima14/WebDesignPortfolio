@@ -1,0 +1,547 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: .6fr 3.4fr;
+	grid-template-rows: 1fr;
+	height: 100vh;
+	background-color: #070709;
+}
+
+
+font-face {
+font-family: 'DM Sans', sans-serif;
+}
+
+.wrapper-1 { /*Sidebar Header*/
+	padding:15px;
+	background-color: #070709;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: auto;
+	position: sticky;
+    z-index: 100;
+}
+
+.wrapper-2 { /*content*/
+	grid-column: 2 / span 1;
+	grid-row: 1;
+    display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+	background-color: rgb(236, 233, 228);
+    height: 100%;
+	padding: 15px;
+	width: auto;
+	
+}
+
+
+.grid-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	height:100%;
+	width: auto;
+	font-family: 'DM Sans', sans-serif; 
+	align-items: center; /* Add this line */
+	margin-bottom: 80px;
+
+}
+
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+	font-family: "Quicksand", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	margin: 30px;
+	font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: 2px underline yellow;
+}
+
+nav a.active {
+	font-weight: bold;
+	text-decoration: 4px overline rgb(245, 146, 60);
+}
+
+.list { /* software skills list*/
+	grid-column: 1/2;
+	display: flex;
+	flex-direction:column;
+	padding: 15px;
+    font-family: 'DM Sans', sans-serif; 
+}
+
+  
+li {
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+}  
+
+
+.logo-container {
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	height: 150px;
+	align-self: center;
+	margin-top: 5px;
+}
+
+.logo-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.h1{
+	display: flex;
+	flex-direction: column;
+	font-size: 15px;
+	align-self: center;
+	justify-self: center;
+    font-family: 'Anton', sans-serif;
+
+}
+
+.h3{
+	grid-column: 1/2;
+	display: flex;
+	flex-direction: column;
+	font-size: 15px;
+	align-self: center;
+	justify-self: center;
+    font-family: 'Anton', sans-serif;
+	margin-left: 15px;
+}
+
+.p{
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	justify-self: center;
+	align-items: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.software-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(50, 111, 113);
+  height: 100%;
+  width: auto;
+  font-family: 'Anton', sans-serif;
+}
+
+.image-block {
+	width: 240px;
+	height: 240px;
+	background-image: url('../..//images/justMe_water1.PNG');
+	background-size: cover;
+	justify-self: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.img-container {
+	width: 260px; /* Set the size of the container */
+    height: 260px;
+    border: 5px solid #000; /* Border width of 1-2px */
+    border-radius: 50%; /* Circular border */
+    padding: 5px; /* Creates space between image and border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+h2 {
+    position: relative; /* Ensure relative positioning for pseudo-elements */
+    margin-bottom: 80px;
+    color: #000000;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block; /* Make sure h2 only takes as much width as its content */
+    text-align: center; /* Center align text if needed */
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0; /* Extend the underline to the right edge */
+    bottom: -10px; /* Position the underline below the text */
+    height: 4px; /* Thickness of the underline */
+    background: linear-gradient(90deg, rgb(117, 115, 115), rgba(232, 232, 240, 0.8), rgb(141, 138, 138)); /* Gradient color */
+    z-index: -1; /* Ensure the underline is behind the text */
+}
+
+.contact_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content {
+    display: flex;
+	flex-direction: row;
+    justify-content: space-between; /* Space between email form and skills section */
+    gap: 4rem; /* Space between the two sections */
+	margin-left: 30px;
+}
+
+.email-form {
+    flex: 1; /* Allow the email form to grow */
+    background-color: rgba(39, 38, 38, 0.8); /* Transparent white background */
+    padding-left: 40px;
+	padding-right: 40px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    padding-top: 60px;
+}
+
+.email-form h3 {
+    margin-top: -2.5rem;
+    color: #ddd;
+    height: 75px; /* Match the height of .skills h3 */
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(112, 116, 121, 0.4), transparent);
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 0 0 2px #ffffff9c, 0 0 0 5px rgba(255, 255, 255, 0.1);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+
+.email-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+	width: auto;
+}
+
+.email-form label {
+    color: #ddd;
+    margin-bottom: 0.5rem;
+}
+
+.email-form input,
+.email-form textarea {
+    background-color: #585858; /* Dark background for input fields */
+    border: 1px solid #444; /* Border color */
+    color: #ddd;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 4px; /* Rounded corners for input fields */
+    width: 600px; /* input box sizes*/
+}
+
+.email-form button {
+    background-color:rgba(67, 151, 207, 0.295);
+    color: #111;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    height: 70px;
+    width: 180px;
+}
+
+.email-form button:hover {
+    background: linear-gradient(90deg, rgb(59, 228, 205), rgb(34, 106, 139)); /* Gradient color */
+
+}
+
+.skills {
+    padding: 0 60px; /* Padding adjusted to account for separate header styling */
+    background-color: rgba(39, 38, 38, 0.8); /* Transparent white background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    width: 780px;
+    height: 810px;
+}
+
+.skills h3 {
+    margin-top: 20px;
+    color: #dfdfdf;
+    height: 75px;
+    width: 100%;
+    margin-bottom: 40px; /* Space between the header and grid */
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(112, 116, 121, 0.9), transparent);
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 5px linear-gradient(90deg, rgb(59, 228, 205), rgb(34, 106, 139));
+    text-align: center; /* Center text */
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+}
+
+.skills h3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border: .01px solid #fff; /* White chalk-style border */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Soft glow effect */
+    z-index: -1;
+}
+
+.skill-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 15px; /* Space between items */
+    padding: 20px 0; /* Add padding for spacing */
+}
+
+.skill-item {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(80, 106, 138, 0.5), transparent);
+    border-radius: 8px;
+    padding: 8px;
+    position: relative; /* Ensure correct positioning for pseudo-elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.skill-item:hover {
+    background: linear-gradient(to bottom, rgba(100, 130, 170, 0.7), transparent); /* Change background color on hover */
+}
+
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.skill-item p {
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.language-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Responsive columns */
+    gap: 15px; /* Space between items */
+    padding: 20px 0; /* Add padding for spacing */
+}
+.language-item{
+    margin-top: -15px;
+    width: 90px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(80, 106, 138, 0.5), transparent);
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 20px;
+    position: relative; /* Ensure correct positioning for pseudo-elements */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    cursor: pointer; /* Change cursor to pointer */
+    
+}
+.language-item:hover {
+    background: linear-gradient(to bottom, rgba(100, 130, 170, 0.7), transparent); /* Change background color on hover */
+}
+
+.language-item img {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.language-item p {
+    color: #ddd;
+    margin: 0;
+    font-size: 11px;
+}
+
+
+h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 1440px) {
+	
+
+	.email-form {
+		width:400px;
+		height:700px;
+	}
+
+	.skill-item,
+	.language-item {
+		width: 100px;
+	}
+
+	.email-form button {
+		background-color:rgba(67, 151, 207, 0.295);
+		color: #111;
+		border: none;
+		padding: 0.5rem;
+		border-radius: 4px;
+		cursor: pointer;
+		font-size: 1rem;
+		font-family: "Bebas Neue", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 25px;
+		height: 70px;
+		width: auto;
+	}
+
+	.email-form input,
+	.email-form textarea {
+		background-color: #585858; /* Dark background for input fields */
+		border: 1px solid #444; /* Border color */
+		color: #ddd;
+		padding: 0.8rem;
+		margin-bottom: 1rem;
+		border-radius: 4px; /* Rounded corners for input fields */
+		width: auto; /* input box sizes*/
+		height: auto;
+	}
+
+	.skills {
+		padding: 0 60px; /* Padding adjusted to account for separate header styling */
+		background-color: rgba(39, 38, 38, 0.8); /* Transparent white background */
+		border-radius: 8px; /* Rounded corners */
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+		width: 400px;
+		height: auto;
+	}
+	
+	.skills h3 {
+		margin-top: 20px;
+		color: #dfdfdf;
+		height: 75px;
+		width: 100%;
+		margin-bottom: 40px; /* Space between the header and grid */
+		border-radius: 10px;
+		background: linear-gradient(to bottom, rgba(112, 116, 121, 0.9), transparent);
+		position: relative;
+		padding: 10px;
+		box-shadow: 0 0 0 2px #fff, 0 0 0 5px linear-gradient(90deg, rgb(59, 228, 205), rgb(34, 106, 139));
+		text-align: center; /* Center text */
+		font-family: "Inter", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 22px;
+	}
+	
+	.skills h3::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 10px;
+		border: .01px solid #fff; /* White chalk-style border */
+		box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Soft glow effect */
+		z-index: -1;
+	}
+	
+	.skill-items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 15px; /* Space between items */
+		padding: 20px 20px; /* Add padding for spacing */
+	}
+	
+	.skill-item {
+		width: 140px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: linear-gradient(to bottom, rgba(80, 106, 138, 0.5), transparent);
+		border-radius: 8px;
+		padding: 8px;
+		position: relative; /* Ensure correct positioning for pseudo-elements */
+		transition: background-color 0.3s ease; /* Smooth transition for background color */
+		cursor: pointer; /* Change cursor to pointer */
+	}
+	
+	.skill-item:hover {
+		background: linear-gradient(to bottom, rgba(100, 130, 170, 0.7), transparent); /* Change background color on hover */
+	}
+	
+	.skill-item img {
+		width: 40px;
+		height: 40px;
+		margin-bottom: 0.5rem;
+	}
+	
+	.skill-item p {
+		color: #e0e0e0;
+		margin: 0;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.skill-item img,
+	.language-item img {
+		width: 60px;
+		height: 60px;
+	}
+	
+}

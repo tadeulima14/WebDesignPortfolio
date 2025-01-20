@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Wrapper styles */
+body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: .6fr 3.4fr;
+    grid-template-rows: 1fr;
+	height: 100vh;
+    width: 100vw;
+}
+
+.wrapper-1 { /* header */
+	background-color: #070709;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    height: 100%;
+    background-color: rgb(236, 233, 228);
+    width: 100%;
+}
+
+.grid-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+	font-family: "Quicksand", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	margin: 30px;
+	font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: 2px underline yellow;
+}
+
+nav a.active {
+	font-weight: bold;
+	text-decoration: 4px overline rgb(245, 146, 60);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    align-self: center;
+    margin-top: 5px;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Video size formatting */
+iframe{
+    display:flex;
+    flex-direction: column;
+    height: 600px;
+    width: 800px;
+    margin-top: 50px;
+}
+
+.p{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
+    color: #f8f8f8;
+
+}
+
+.backhome{
+    margin-left: 40px;
+    margin-top: 50px;
+  
+    width: auto;
+  }
+  
+  .backhome h3{
+    font-size: 16px;
+    color: aliceblue;
+  }
+  
+  .Backto-container{
+    display: block;
+    block-size: fit-content;
+    align-items: center;
+    width: fit-content;
+    rotate: 180deg;
+    margin-left: 30px;
+  
+  }
+
+
+@media screen and (max-width: 600px) {
+	body{
+		grid-template-columns: 1fr;
+		grid-template-rows: 20% 80%;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		width: 100vw;
+		height: 100vh;
+	}
+    
+	.wrapper-1 { /* header, flex column with logo, and nav */ 
+        grid-row: 1/2;
+        grid-column: 1;
+		top: 0;
+		background-color: #070709;
+		padding-top: 3px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		position: sticky;
+		z-index: 100;
+	
+	}
+
+  	nav {
+		display: flex; /* this orients the nav into a row*/
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		height: auto;
+		width: auto;
+	}
+	
+	nav a {
+		color: white;
+		text-decoration: none;
+		margin: 5px;
+		font-size: 12px;
+	}
+
+    .logo-container {
+		display: flex;
+		flex-direction: row;
+		width: auto;
+		height: 80px;
+		align-self: center;
+	}
+	
+	.logo-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+    
+    .wrapper-2 {
+        grid-row: 2/ span 1;
+        grid-column: 1;
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 40% 60%;
+        gap: 10px;
+        height: 100%;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        overflow: hidden;
+        background-color: rgb(12, 14, 30); 
+    }
+
+    .grid-item {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        height: 100%;
+    }
+    
+    .grid-content {
+        position: relative;
+        height: 100%;
+    }
+    
+    
+    .nav a:hover {
+        color: orange;
+    }
+    
+
+
+    .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    iframe{
+        display:flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    
+    
+}
